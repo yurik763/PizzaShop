@@ -1,3 +1,16 @@
-
-
+<table cellpadding="10" cellspacing="0" border="1">
+   <% @products.each do |product| %>
+    <tr>
+      <td><%= product.title %>
+      <td><%= product.description %>
+      <td><%= product.price %>
+      <td><%= product.size %>
+      <td><%= product.is_spicy %>
+      <td><%= product.is_veg %>
+      <td><%= product.is_best_offer %>
+      <td><img src="<%= product.path_to_image %>"/></td>
+   
+    </tr>
+   <% end %>
+</table>
 
