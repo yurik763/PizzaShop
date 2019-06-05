@@ -1,13 +1,13 @@
 <table cellpadding="10" cellspacing="0" border="1">
    <% @products.each do |product| %>
     <tr>
-      <td><%= product.title %>
-      <td><%= product.description %>
-      <td><%= product.price %>
-      <td><%= product.size %>
-      <td><%= product.is_spicy %>
-      <td><%= product.is_veg %>
-      <td><%= product.is_best_offer %>
+      <td><%= product.title %></td>
+      <td><%= product.description %></td>
+      <td><%= product.price %></td>
+      <td><%= product.size %></td>
+      <td><%= product.is_spicy %></td>
+      <td><%= product.is_veg %></td>
+      <td><%= product.is_best_offer %></td>
       <td><img src="<%= product.path_to_image %>"/></td>
    
     </tr>
