@@ -17,10 +17,15 @@ function add_to_cart(id)
 	x = x*1 + 1                    //считаем сколько раз нажали добавить товар, для каждого товара отдельно
 	window.localStorage.setItem(key, x); // hh['key'] = x присваеваем знаечение нашему ключу
 
-	alert('Количество пицц в корзине:' + cart_get_number_of_items());
+	update_orders_input();
+	//вывод кол-ва alert('Количество пицц в корзине:' + cart_get_number_of_items());
 }
 
- 
+function update_orders_input()
+{
+	var orders = cart_get_orders();
+	$('#orders_input').val(orders);
+} 
 
 
 function cart_get_number_of_items()
