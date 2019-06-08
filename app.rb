@@ -27,8 +27,8 @@ post '/cart' do
 	@items = parse_orders_input orders_input
 
 	@items.each do |item|
-		# id, cnt
-		item[0] = Product.find(item[0]) # item[0] это id и мы замещаем объектом
+		# id, cnt item[0] это id и мы замещаем объектом
+		item[0] = Product.find(item[0])
 	end
 
 	erb :cart
