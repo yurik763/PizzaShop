@@ -51,7 +51,7 @@ function cart_get_number_of_items()
 	return cnt;
 }
 
-function cart_get_orders()
+function cart_get_orders()  // Создает строку заказа "product_1=1,product_undefined=2,product_3=3,product_2=2,"
 {
 	var orders = '';
 	for(var i = 0; i < window.localStorage.length; i++)  // вместо each
