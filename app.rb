@@ -9,6 +9,9 @@ set :database, "sqlite3:pizzashop.db"
 class Product < ActiveRecord::Base
 end
 
+class Order < ActiveRecord::Base
+end
+
 get '/' do
 	erb :index
 end
@@ -22,6 +25,11 @@ get '/products' do
   erb :products
 end
 
+post "/place_order" do
+	@order = Order.create params[:order]
+    erb "<h2> Спасибо, заказ принят ! </h2>"
+end
+
 post '/cart' do
 	@orders_input = params[:orders]  #orders берется из layout
 	@items = parse_orders_input @orders_input
@@ -32,6 +40,7 @@ post '/cart' do
 	end
 
 	erb :cart
+
 end
 
 def parse_orders_input orders_input
