@@ -1,0 +1,17 @@
+<h2>Заказы покупателей</h2>
+<table class="table table-striped">
+  
+
+  <tbody>
+<% @orders.each do |order| %>
+	<table class="table table-striped">
+		<tr>
+      	<td>Заказ: <%= order.orders_input %></td>
+		<td>Имя <%= order.name %></td>
+		<td>Телефон: <%= order.phone %></td>
+		<td>Адрес доставкии: <%= order.address %></td>
+		<td>Дата и время заказа: <%= order.created_at %></td>
+		</tr>
+	<% end %>
+  </tbody>
+</table>

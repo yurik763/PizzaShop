@@ -25,6 +25,11 @@ get '/products' do
   erb :products
 end
 
+get '/admin' do
+  @orders = Order.all
+  erb :admin
+end
+
 post "/place_order" do
 	@order = Order.create params[:order]
     erb "<h2> Спасибо, заказ принят ! </h2>"
