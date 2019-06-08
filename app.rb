@@ -23,8 +23,8 @@ get '/products' do
 end
 
 post '/cart' do
-	orders_input = params[:orders]  #orders берется из layout
-	@items = parse_orders_input orders_input
+	@orders_input = params[:orders]  #orders берется из layout
+	@items = parse_orders_input @orders_input
 
 	@items.each do |item|
 		# id, cnt item[0] это id и мы замещаем объектом
