@@ -66,3 +66,9 @@ function cart_get_orders()  // Создает строку заказа "product
 	}
 	return orders;
 }
+
+function cancel_order()
+{
+	alert('Корзина очищена');
+	return false;
+}
