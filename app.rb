@@ -26,7 +26,7 @@ get '/products' do
 end
 
 get '/admin' do
-  @orders = Order.all
+  @orders = Order.order('created_at DESC')
   erb :admin
 end
 
