@@ -32,7 +32,7 @@ end
 
 post "/place_order" do
 	@order = Order.create params[:order]
-    erb "<h2> Спасибо, заказ принят ! </h2>"
+    erb :order_placed
 end
 
 post '/cart' do
