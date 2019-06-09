@@ -67,12 +67,14 @@ function cart_get_orders()  // Создает строку заказа "product
 	return orders;
 }
 
-function cancel_order()
+function cancel_order()    //очищаем корзину через кнопку Отменить (в div корзины нужно написать div id="cart")
 {
 	window.localStorage.clear();
 	
 	update_orders_input();
 	update_orders_button();
+
+	$('#cart').text('Ваша корзина очищена');
 	
 	return false;
 }
