@@ -69,6 +69,10 @@ function cart_get_orders()  // Создает строку заказа "product
 
 function cancel_order()
 {
-	alert('Корзина очищена');
+	window.localStorage.clear();
+	
+	update_orders_input();
+	update_orders_button();
+	
 	return false;
 }
