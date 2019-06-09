@@ -3,8 +3,7 @@
   
 
   <tbody>
-<% @orders.each do |order| %>
-	<table class="table table-striped">
+	<% @orders.each do |order| %>
 		<tr>
       	<td>Заказ: <%= order.orders_input %></td>
 		<td>Имя <%= order.name %></td>
